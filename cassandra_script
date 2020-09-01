@@ -1,0 +1,5 @@
+docker run --name cassandra-node -p 9042:9042 -d cassandra
+
+docker exec -it cassandra-node bash
+
+CREATE KEYSPACE mykeyspace WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 1 };
